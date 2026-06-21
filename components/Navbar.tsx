@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, ShoppingCart, User, Menu } from 'lucide-react';
+import { Search, ShoppingCart, User, Menu, X, Instagram, Youtube } from 'lucide-react';
+import { useState } from 'react';
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="bg-[#ffffff] border-b border-[#e5e2db] sticky top-0 z-50">
       <div className="flex justify-between items-center w-full px-4 md:px-6 lg:px-8 max-w-7xl mx-auto py-3 min-h-[100px]">
@@ -10,6 +15,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-[180px] md:w-[300px] h-auto object-contain flex-shrink-0" referrerPolicy="no-referrer" />
         </Link>
+
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center">
@@ -29,6 +35,16 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 md:gap-4 text-[#061b0e]">
+          <div className="hidden lg:flex items-center gap-1 mr-2 border-r border-[#e5e2db] pr-4">
+            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:bg-[#f6f3ec] p-2 rounded-full transition-colors text-[#434843] hover:text-[#061b0e] flex items-center justify-center">
+              <Instagram className="w-[18px] h-[18px]" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:bg-[#f6f3ec] p-2 rounded-full transition-colors text-[#434843] hover:text-[#061b0e] flex items-center justify-center">
+              <Youtube className="w-[18px] h-[18px]" />
+              <span className="sr-only">YouTube</span>
+            </Link>
+          </div>
           <button aria-label="Buscar" className="hover:bg-[#f6f3ec] p-2 rounded-full transition-colors flex items-center justify-center">
             <Search className="w-5 h-5" />
           </button>
@@ -40,11 +56,59 @@ export function Navbar() {
             <User className="w-5 h-5" />
           </button>
           {/* Mobile Menu Toggle */}
-          <button aria-label="Menu" className="md:hidden hover:bg-[#f6f3ec] p-2 rounded-full transition-colors flex items-center justify-center">
-            <Menu className="w-5 h-5" />
+          <button 
+            aria-label="Menu" 
+            className="md:hidden hover:bg-[#f6f3ec] p-2 rounded-full transition-colors flex items-center justify-center"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-[#e5e2db] bg-white absolute top-full left-0 w-full shadow-lg">
+          <nav className="flex flex-col py-4 px-6 space-y-4">
+            <Link 
+              href="/store" 
+              className="text-[#434843] hover:text-[#061b0e] font-['var(--font-archivo-narrow)'] text-sm font-semibold tracking-wider uppercase border-b border-[#e5e2db] pb-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Melhores Escolhas
+            </Link>
+            <Link 
+              href="/store" 
+              className="text-[#434843] hover:text-[#061b0e] font-['var(--font-archivo-narrow)'] text-sm font-semibold tracking-wider uppercase border-b border-[#e5e2db] pb-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Caça
+            </Link>
+            <Link 
+              href="/article" 
+              className="text-[#434843] hover:text-[#061b0e] font-['var(--font-archivo-narrow)'] text-sm font-semibold tracking-wider uppercase border-b border-[#e5e2db] pb-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Pesca
+            </Link>
+            <Link 
+              href="/review" 
+              className="text-[#434843] hover:text-[#061b0e] font-['var(--font-archivo-narrow)'] text-sm font-semibold tracking-wider uppercase border-b border-[#e5e2db] pb-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Equipamentos
+            </Link>
+            <div className="flex items-center gap-4 pt-2">
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#434843] hover:text-[#061b0e] flex items-center gap-2 font-['var(--font-archivo-narrow)'] text-sm uppercase tracking-wider">
+                <Instagram className="w-5 h-5" /> Instagram
+              </Link>
+              <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-[#434843] hover:text-[#061b0e] flex items-center gap-2 font-['var(--font-archivo-narrow)'] text-sm uppercase tracking-wider">
+                <Youtube className="w-5 h-5" /> YouTube
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

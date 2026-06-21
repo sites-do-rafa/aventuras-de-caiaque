@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Instagram, Youtube } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -12,6 +13,16 @@ export function Footer() {
           <p className="font-['var(--font-work-sans)'] text-[#434843] max-w-sm">
             Guias profissionais de equipamentos para o homem moderno ao ar livre. Testado em campo, confiável e sem pretensões.
           </p>
+          <div className="flex items-center gap-3 pt-2">
+            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#434843] hover:text-[#061b0e] hover:bg-[#c3c8c1]/30 p-2 rounded-full transition-colors -ml-2">
+              <Instagram className="w-5 h-5" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-[#434843] hover:text-[#061b0e] hover:bg-[#c3c8c1]/30 p-2 rounded-full transition-colors">
+              <Youtube className="w-5 h-5" />
+              <span className="sr-only">YouTube</span>
+            </Link>
+          </div>
         </div>
         <div className="flex flex-col space-y-4">
           <h4 className="font-['var(--font-archivo-narrow)'] text-[#061b0e] font-semibold text-sm uppercase tracking-[0.05em] border-b border-[#c3c8c1] pb-1 inline-block w-max">
