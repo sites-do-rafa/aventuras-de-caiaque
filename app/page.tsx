@@ -23,9 +23,9 @@ export default function Home() {
             {/* Subtle overlay to ensure text readability */}
             <div className="absolute inset-0 bg-black/30" />
           </div>
-          <div className="relative z-10 text-center px-4 max-w-3xl">
-            <h1 className="font-['var(--font-domine)'] text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight">
-              Prepare-se para o Selvagem
+          <div className="relative z-10 text-center px-4 max-w-5xl w-full">
+            <h1 className="font-['var(--font-domine)'] text-[6vw] sm:text-[5vw] md:text-4xl lg:text-5xl xl:text-[56px] text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight whitespace-nowrap">
+              Prepare-se para as Aventuras
             </h1>
             <p className="font-['var(--font-work-sans)'] text-lg md:text-xl text-[#fcf9f2] mb-8 drop-shadow font-medium">
               Guias profissionais de equipamentos, avaliações testadas em campo e técnicas tradicionais para o aventureiro moderno.
