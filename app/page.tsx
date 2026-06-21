@@ -24,7 +24,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/30" />
           </div>
           <div className="relative z-10 text-center px-4 max-w-5xl w-full">
-            <h1 className="font-['var(--font-domine)'] text-[6vw] sm:text-[5vw] md:text-4xl lg:text-5xl xl:text-[56px] text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight whitespace-nowrap">
+            <h1 className="font-['var(--font-domine)'] text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[56px] text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight leading-tight">
               Prepare-se para as Aventuras
             </h1>
             <p className="font-['var(--font-work-sans)'] text-lg md:text-xl text-[#fcf9f2] mb-8 drop-shadow font-medium">

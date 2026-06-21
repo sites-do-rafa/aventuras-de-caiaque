@@ -4,16 +4,13 @@ import Image from 'next/image';
 export function Footer() {
   return (
     <footer className="bg-[#ebe8e1] border-t border-[#c3c8c1] mt-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 lg:px-8 py-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 lg:px-8 py-12 max-w-7xl mx-auto items-end">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
             <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-auto h-[96px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
           </div>
           <p className="font-['var(--font-work-sans)'] text-[#434843] max-w-sm">
             Guias profissionais de equipamentos para o homem moderno ao ar livre. Testado em campo, confiável e sem pretensões.
-          </p>
-          <p className="font-['var(--font-work-sans)'] text-[#434843] text-sm mt-4">
-            © {new Date().getFullYear()} Aventuras de Caiaque. Todos os direitos reservados.
           </p>
         </div>
         <div className="flex flex-col space-y-4">
@@ -36,6 +33,12 @@ export function Footer() {
             <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Fale Conosco</Link></li>
           </ul>
         </div>
+      </div>
+      
+      <div className="border-t border-[#c3c8c1] py-6 px-6 lg:px-8 text-center">
+        <p className="font-['var(--font-work-sans)'] text-[#434843] text-sm md:text-base">
+          © {new Date().getFullYear()} Aventuras de Caiaque. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   );

@@ -5,10 +5,10 @@ import { Search, ShoppingCart, User, Menu } from 'lucide-react';
 export function Navbar() {
   return (
     <header className="bg-[#ffffff] border-b border-[#e5e2db] sticky top-0 z-50">
-      <div className="flex justify-between items-center w-full px-4 md:px-6 lg:px-8 max-w-7xl mx-auto h-20">
+      <div className="flex justify-between items-center w-full px-4 md:px-6 lg:px-8 max-w-7xl mx-auto py-3 min-h-[100px]">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={240} height={60} className="w-auto h-[60px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
+          <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-auto h-[96px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
         </Link>
 
         {/* Desktop Navigation */}
