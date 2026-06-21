@@ -12,14 +12,16 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative w-full h-[600px] flex items-center justify-center bg-[#e5e2db] border-b border-[#c3c8c1]">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZutwPfq8yiJ3vWyEltn6srZZq3KnAHp1p4BozhOF1AxXFjfFvN2g_iStUuacpaNvX77ccwK4HptekJguocLkd-o6kK-Nx1ptUvikbpqXh6OZ4bEqa-40stXgLAm0hrfWe6SMzS0Xhy54I6m2INZl1GUVtqk2P9MhfEx02A7j1n9vhRJhlS2cyGpODK-X3reEyeCwvCcKeV0kpycI9swyyYJzKXxCqYY5z7ITvSYUh7wkkqr-vEZv6PMXR8OOcMxJkSt1RWx6Z0c"
-              alt="Paisagem montanhosa ao amanhecer"
-              fill
-              className="object-cover opacity-80 mix-blend-multiply"
-              referrerPolicy="no-referrer"
-              priority
+            <video
+              src="/hero-abertura.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="object-cover w-full h-full"
             />
+            {/* Subtle overlay to ensure text readability */}
+            <div className="absolute inset-0 bg-black/30" />
           </div>
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <h1 className="font-['var(--font-domine)'] text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight">
