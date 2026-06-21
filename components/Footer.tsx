@@ -1,0 +1,42 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
+export function Footer() {
+  return (
+    <footer className="bg-[#ebe8e1] border-t border-[#c3c8c1] mt-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 lg:px-8 py-12 max-w-7xl mx-auto">
+        <div className="flex flex-col space-y-4">
+          <div className="flex items-center">
+            <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-auto h-[96px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
+          </div>
+          <p className="font-['var(--font-work-sans)'] text-[#434843] max-w-sm">
+            Guias profissionais de equipamentos para o homem moderno ao ar livre. Testado em campo, confiável e sem pretensões.
+          </p>
+          <p className="font-['var(--font-work-sans)'] text-[#434843] text-sm mt-4">
+            © {new Date().getFullYear()} Aventuras de Caiaque. Todos os direitos reservados.
+          </p>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <h4 className="font-['var(--font-archivo-narrow)'] text-[#061b0e] font-semibold text-sm uppercase tracking-[0.05em] border-b border-[#c3c8c1] pb-1 inline-block w-max">
+            Recursos
+          </h4>
+          <ul className="space-y-2 font-['var(--font-work-sans)']">
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Guias de Caça</Link></li>
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Técnicas de Pesca</Link></li>
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Avaliações de Equipamentos</Link></li>
+          </ul>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <h4 className="font-['var(--font-archivo-narrow)'] text-[#061b0e] font-semibold text-sm uppercase tracking-[0.05em] border-b border-[#c3c8c1] pb-1 inline-block w-max">
+            Legal e Suporte
+          </h4>
+          <ul className="space-y-2 font-['var(--font-work-sans)']">
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Divulgação de Afiliados</Link></li>
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Política de Privacidade</Link></li>
+            <li><Link href="#" className="text-[#434843] hover:text-[#061b0e] transition-colors">Fale Conosco</Link></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
