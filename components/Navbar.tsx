@@ -8,7 +8,7 @@ export function Navbar() {
       <div className="flex justify-between items-center w-full px-4 md:px-6 lg:px-8 max-w-7xl mx-auto py-3 min-h-[100px]">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-auto h-[96px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
+          <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-[180px] md:w-[300px] h-auto object-contain flex-shrink-0" referrerPolicy="no-referrer" />
         </Link>
 
         {/* Desktop Navigation */}

@@ -7,7 +7,7 @@ export function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 lg:px-8 py-12 max-w-7xl mx-auto items-end">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
-            <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-auto h-[96px] object-contain flex-shrink-0" referrerPolicy="no-referrer" />
+            <Image src="/logo.png" alt="Aventuras de Caiaque Logo" width={300} height={96} className="w-[180px] md:w-[300px] h-auto object-contain flex-shrink-0" referrerPolicy="no-referrer" />
           </div>
           <p className="font-['var(--font-work-sans)'] text-[#434843] max-w-sm">
             Guias profissionais de equipamentos para o homem moderno ao ar livre. Testado em campo, confiável e sem pretensões.
