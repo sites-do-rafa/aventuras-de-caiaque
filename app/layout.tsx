@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="pt-BR" className={`${domine.variable} ${workSans.variable} ${archivoNarrow.variable}`}>
-      <body className="bg-[#fcf9f2] text-[#1c1c18] font-['var(--font-work-sans)'] antialiased min-h-screen flex flex-col selection:bg-[#1b3022] selection:text-white" suppressHydrationWarning>
+    <html lang="pt-BR" className={`${domine.variable} ${workSans.variable} ${archivoNarrow.variable} overflow-x-hidden`}>
+      <body className="bg-[#fcf9f2] text-[#1c1c18] font-['var(--font-work-sans)'] antialiased min-h-screen flex flex-col selection:bg-[#1b3022] selection:text-white overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>
     </html>

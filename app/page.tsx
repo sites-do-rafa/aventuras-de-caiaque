@@ -23,8 +23,8 @@ export default function Home() {
             {/* Subtle overlay to ensure text readability */}
             <div className="absolute inset-0 bg-black/30" />
           </div>
-          <div className="relative z-10 text-center px-4 max-w-5xl w-full">
-            <h1 className="font-['var(--font-domine)'] text-[6vw] sm:text-[5vw] md:text-4xl lg:text-5xl xl:text-[56px] text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight whitespace-nowrap">
+          <div className="relative z-10 text-center px-4 max-w-5xl w-full mx-auto">
+            <h1 className="font-['var(--font-domine)'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] text-white font-bold mb-6 drop-shadow-md uppercase tracking-tight leading-tight break-words [text-wrap:balance]">
               Prepare-se para as Aventuras
             </h1>
             <p className="font-['var(--font-work-sans)'] text-lg md:text-xl text-[#fcf9f2] mb-8 drop-shadow font-medium">
@@ -132,9 +132,9 @@ export default function Home() {
             </section>
 
             {/* Ad Banner */}
-            <div className="w-full bg-[#f1eee7] flex flex-col items-center justify-center border border-dashed border-[#c3c8c1] rounded py-10 my-12">
+            <div className="w-full bg-[#f1eee7] flex flex-col items-center justify-center border border-dashed border-[#c3c8c1] rounded py-10 my-12 overflow-hidden">
               <span className="font-['var(--font-archivo-narrow)'] font-semibold text-[10px] text-[#434843] uppercase tracking-widest mb-3">Publicidade</span>
-              <div className="w-[300px] md:w-[728px] h-[250px] md:h-[90px] bg-[#dcdad3] border border-[#c3c8c1] flex items-center justify-center text-[#434843] font-['var(--font-work-sans)'] text-sm">
+              <div className="w-full max-w-[300px] md:max-w-[728px] h-[250px] md:h-[90px] bg-[#dcdad3] border border-[#c3c8c1] flex items-center justify-center text-[#434843] font-['var(--font-work-sans)'] text-sm">
                 [ Espaço para Anúncio Patrocinado ]
               </div>
             </div>
@@ -209,9 +209,9 @@ export default function Home() {
           {/* Sidebar (4 columns) */}
           <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-28 self-start">
             {/* Sidebar Ad */}
-            <div className="w-full bg-[#f1eee7] flex flex-col items-center justify-center border border-dashed border-[#c3c8c1] rounded py-8">
+            <div className="w-full bg-[#f1eee7] flex flex-col items-center justify-center border border-dashed border-[#c3c8c1] rounded py-8 overflow-hidden px-4">
               <span className="font-['var(--font-archivo-narrow)'] font-semibold text-[10px] text-[#434843] uppercase tracking-widest mb-3">Publicidade</span>
-              <div className="w-[300px] h-[250px] bg-[#dcdad3] border border-[#c3c8c1] flex items-center justify-center text-[#434843] font-['var(--font-work-sans)'] text-sm">
+              <div className="w-full max-w-[300px] h-[250px] bg-[#dcdad3] border border-[#c3c8c1] flex items-center justify-center text-[#434843] font-['var(--font-work-sans)'] text-sm">
                 [ Espaço AdSense 300x250 ]
               </div>
             </div>
