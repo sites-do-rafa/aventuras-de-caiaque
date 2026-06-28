@@ -18,8 +18,14 @@ const archivoNarrow = Archivo_Narrow({
 });
 
 export const metadata: Metadata = {
-  title: 'OutdoorPro | Aventuras de Caiaque',
+  title: 'Aventuras de Caiaque',
   description: 'Guias profissionais de equipamentos para o homem moderno ao ar livre. Testado em campo, confiável e sem pretensões.',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/logo.png',
+    },
+  ],
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
